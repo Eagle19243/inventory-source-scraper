@@ -1,0 +1,2 @@
+const MAX_ATTEMPTS = 20;
+const INTERVAL = 30 * 1000;

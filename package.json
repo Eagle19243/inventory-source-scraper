@@ -1,0 +1,9 @@
+{
+  "name": "inventory-source-scraper",
+  "version": "1.0.0",
+  "description": "This chrome extension works to scrape product from app.inventorysource.com",
+  "scripts": {
+    "pack": "rm *.zip; cd public; zip -r ../inventory-source-scraper.zip *"
+  },
+  "author": "Eagle19243"
+}
