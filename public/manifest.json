@@ -1,7 +1,7 @@
 {
     "name": "Inventory Source Scraper",
     "version": "1.0.0",
-    "description": "This chrome extension works to scrape product from app.inventorysource.com",
+    "description": "This chrome extension works to scrape products from app.inventorysource.com",
     "manifest_version": 2,
     "icons": {
         "16": "images/icon-16.png",
@@ -15,27 +15,10 @@
     },
     "background": {
         "scripts": [
-            "vendors/jquery/jquery.min.js",
-            "js/config.js",
-            "js/global.js",
             "js/background.js"
         ],
         "persistent": true
     },
-    "content_scripts": [
-        {
-            "matches": [
-              "https://app.inventorysource.com/*",
-              "http://app.inventorysource.com/*"
-            ],
-            "js": [
-              "vendors/jquery/jquery.min.js",
-              "js/inventorysource.js",
-              "js/content.js"
-            ],
-            "run_at": "document_end"
-        }
-    ],
     "permissions": [
         "storage",
         "activeTab"

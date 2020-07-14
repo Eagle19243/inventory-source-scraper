@@ -29,19 +29,3 @@ function openURL(url, tabId) {
         }
     });
 }
-
-function isStarted() {
-    return new Promise((resolve, reject) => {
-        chrome.storage.local.get(['started'], (result) => {
-            if (result && result.started === true) {
-                resolve(true);
-            } else {
-                resolve(false);
-            }
-        });
-    });
-}
-
-function setScraperStatus(started) {
-    chrome.storage.local.set({'started': started});
-}

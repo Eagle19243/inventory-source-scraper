@@ -1,23 +1,26 @@
 .container {
     display: flex;
-    width: 200px;
-    height: 230px;
+    width: 320px;
+    height: auto;
     padding: 30px;
     flex-direction: column;
     align-items: center;
 }
-.lbl-every {
-    font-size: 20px;
+.lbl-running {
+    font-size: 16px;
+    display: none;
 }
-.interval {
-    width: 80px;
-    margin-bottom: 5px;
-    text-align: center;
-}
-.interval-unit {
-    width: 80px !important;
-    margin-bottom: 15px;
+.lbl-finished {
+    font-size: 16px;
+    display: none;
 }
 .btn-start {
     width: 100px;
+    margin-top: 25px;
+    display: none;
+}
+.btn-download {
+    width: 100px;
+    margin-top: 10px;
+    display: none;
 }
