@@ -1,3 +1,4 @@
-const URL_API = 'http://127.0.0.1:4093';
-const RUNNING   = 'running';
-const FINISHED  = 'finished';
+const URL_API   = 'http://127.0.0.1:5000';
+const RUNNING   = 'PENDING';
+const FINISHED  = 'Task Completed';
+const FAILURE   = 'FAILURE';

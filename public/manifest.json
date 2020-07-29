@@ -11,7 +11,8 @@
     },
     "browser_action": {
         "default_icon": "images/icon-48.png",
-        "default_title": "Inventory Source Scraper"
+        "default_title": "Inventory Source Scraper",
+        "default_popup": "html/popup.html"
     },
     "background": {
         "scripts": [
@@ -21,7 +22,7 @@
     },
     "permissions": [
         "storage",
-        "activeTab"
+        "http://127.0.0.1:5000/*"
     ]
 }
   
