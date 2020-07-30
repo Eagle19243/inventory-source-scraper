@@ -37,6 +37,7 @@ async function initPopupUI() {
         $('.lbl-finished').show();
         $('.btn-start').show();
         $('.btn-download').show();
+        await setValueToStorage({task_id: null});
     } else {
         $('.lbl-running').hide();
         $('.lbl-finished').hide();
