@@ -4,7 +4,7 @@ function getScraperStatus(taskId) {
             url: `${URL_API}/get_status/${taskId}`,
             type: 'POST',
             success: response => {
-                resolve(response.status);
+                resolve(response.state);
             },
             error: err => {
                 reject(err);
