@@ -10,8 +10,7 @@ async function init() {
 }
 
 async function startButtonClicked() {
-    const taskId = await startScraping();
-    await setValueToStorage({task_id: taskId});
+    await startScraping();
     await initPopupUI();
 }
 
@@ -20,14 +19,9 @@ function downloadButtonClicked() {
 }
 
 async function initPopupUI() {
-    let status   = FINISHED;
-    const taskId = await getValueFromStorage('task_id');
+    const status = await getScraperStatus();
     
-    if (taskId) {
-        status = await getScraperStatus(taskId);
-    }
-    
-    if (status === RUNNING) {
+    if (status === PROGRESS) {
         $('.lbl-running').show();
         $('.lbl-finished').hide();
         $('.btn-start').hide();
@@ -37,7 +31,6 @@ async function initPopupUI() {
         $('.lbl-finished').show();
         $('.btn-start').show();
         $('.btn-download').show();
-        await setValueToStorage({task_id: null});
     } else {
         $('.lbl-running').hide();
         $('.lbl-finished').hide();
